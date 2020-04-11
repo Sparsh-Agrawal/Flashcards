@@ -5,14 +5,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String term = scan.nextLine();
-        String definition = scan.nextLine();
-        String answer = scan.nextLine();
 
-        if(definition.equals(answer)) {
-            System.out.println("Your answer is right!");
-        } else {
-            System.out.println("Your answer is wrong...");
+        System.out.println("Input the number of cards:");
+        int n = scan.nextInt();
+        scan.nextLine();
+        String card = "";
+        String definition = "";
+
+        for (int i=1;i<=n;i++) {
+            System.out.println("The card #" + i);
+            card = scan.nextLine();
+            definition = scan.nextLine();
         }
     }
 }
