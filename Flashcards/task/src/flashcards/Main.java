@@ -13,8 +13,9 @@ public class Main {
         String definition = "";
 
         for (int i=1;i<=n;i++) {
-            System.out.println("The card #" + i);
+            System.out.println("The card #" + i + ":");
             card = scan.nextLine();
+            System.out.println("The definition of the card #" + i + ":");
             definition = scan.nextLine();
         }
     }
