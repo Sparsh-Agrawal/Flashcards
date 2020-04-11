@@ -9,14 +9,23 @@ public class Main {
         System.out.println("Input the number of cards:");
         int n = scan.nextInt();
         scan.nextLine();
-        String card = "";
-        String definition = "";
+        String[] card = new String[n];
+        String[] definition = new String[n];
 
         for (int i=1;i<=n;i++) {
             System.out.println("The card #" + i + ":");
-            card = scan.nextLine();
+            card[i-1] = scan.nextLine();
             System.out.println("The definition of the card #" + i + ":");
-            definition = scan.nextLine();
+            definition[i-1] = scan.nextLine();
+        }
+
+        for(int j=0;j<n;j++) {
+            System.out.println("Print the definition of " + "\"" + card[j] + "\"" + ":");
+            if(definition[j].equals(scan.nextLine())) {
+                System.out.println("Correct answer.");
+            } else {
+                System.out.println("Wrong answer. The correct one is " + "\"" + definition[j] + "\"" + ".");
+            }
         }
     }
 }
